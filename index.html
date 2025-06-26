@@ -21,10 +21,15 @@
             border: none;
         }
     </style>
-   <script type='text/javascript' src='https://s3.eu-central-1.amazonaws.com/weblinks.aupris.com/somescript.js'></script>
+    <script type='text/javascript'
+        src='https://s3.eu-central-1.amazonaws.com/weblinks.aupris.com/somescript.js'></script>
 </head>
 
 <body>
+    <a href="./concent.html">
+        <p>Consent page</p>
+    </a>
+
     <h1>🍪 Simulated Cookie Consent</h1>
     <aupris-kleiner-preisrechner-1>loading...</aupris-kleiner-preisrechner-1>
     <Aupris-Bestell-Preisrechner>loading...</Aupris-Bestell-Preisrechner>
@@ -35,29 +40,7 @@
         <button onclick="acceptCookies()">Accept All</button>
     </div>
 
-    <script>
-        function loadCalculatorScript() {
-            const script = document.createElement('script');
-            script.src = 'https://s3.eu-central-1.amazonaws.com/weblinks.aupris.com/somescript.js';
-            script.type = 'text/javascript';
-            document.head.appendChild(script);
-        }
 
-        function loadCalculator() {
-            if (localStorage.getItem('cookiesAccepted') === 'true') {
-                document.getElementById('calculator-frame').style.display = 'block';
-                loadCalculatorScript(); // ✅ Load only after consent
-            }
-        }
-
-        function acceptCookies() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            document.getElementById('cookie-banner').style.display = 'none';
-            loadCalculator();
-        }
-
-        window.addEventListener('load', loadCalculator);
-    </script>
 </body>
 
 </html>
