@@ -44,14 +44,14 @@
 
         function loadCalculator() {
             if (localStorage.getItem('cookiesAccepted') === 'true') {
-                document.getElementById('calculator-frame').style.display = 'block';
+                // document.getElementById('calculator-frame').style.display = 'block';
                 loadCalculatorScript(); 
             }
         }
 
         function acceptCookies() {
             localStorage.setItem('cookiesAccepted', 'true');
-            document.getElementById('cookie-banner').style.display = 'none';
+            // document.getElementById('cookie-banner').style.display = 'none';
             loadCalculator();
         }
 
